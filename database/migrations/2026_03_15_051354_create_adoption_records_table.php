@@ -17,9 +17,7 @@ return new class extends Migration
             $table->date('adoption_date');
             $table->string('adoption_fee')->nullable();
             $table->enum('payment_status', ['paid', 'waived', 'pending'])->default('pending');
-            $table->string('contract_number')->unique()->nullable();
-            $table->text('notes')->nullable();
-            $table->string('contract_file')->nullable();                            // uploaded PDF
+            $table->string('contract_number')->unique()->nullable();                        
             $table->foreignId('processed_by')->constrained('users')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();

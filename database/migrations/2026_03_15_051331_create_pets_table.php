@@ -20,8 +20,8 @@ return new class extends Migration
             $table->enum('status', ['available', 'pending', 'adopted', 'unavailable'])->default('available');
             $table->text('description')->nullable();
             $table->boolean('is_vaccinated')->default(false);
-            $table->boolean('is_neutered')->default(false);
-            $table->boolean('is_microchipped')->default(false);
+            $table->boolean('is_neutered')->default(false);       // was missing
+            $table->boolean('is_microchipped')->default(false);   // was missing
             $table->boolean('is_house_trained')->default(false);
             $table->boolean('good_with_kids')->default(false);
             $table->boolean('good_with_dogs')->default(false);
